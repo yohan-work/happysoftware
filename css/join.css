@@ -1,0 +1,181 @@
+/* 버튼 스타일 */
+.login-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #3182f6;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #1c6ed3;
+}
+
+/* 푸터 스타일 */
+.footer {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #3182f6;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* 회원가입 폼 스타일 */
+.signup-form {
+    width: 100%;
+    max-width: 400px; /* 모바일 화면 비율 고정 */
+    padding: 0 1.5rem;
+}
+
+.signup-form .input-group {
+    margin-bottom: 1.5rem;
+}
+
+.signup-form label {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.signup-form input:focus {
+    border-color: #3182f6;
+    box-shadow: 0 0 4px rgba(49, 130, 246, 0.5);
+}
+
+/* 회원가입 버튼 스타일 */
+.signup-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #3182f6;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #1c6ed3;
+}
+
+/* 하단 링크 스타일 */
+.signup-footer {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.signup-footer a {
+    color: #3182f6;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.signup-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ID/PW 찾기 폼 스타일 */
+.find-form {
+    width: 100%;
+    max-width: 400px; /* 모바일 화면 비율 고정 */
+    padding: 0 1.5rem;
+}
+
+.find-form .input-group {
+    margin-bottom: 1.5rem;
+}
+
+.find-form label {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.find-form input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.find-form input:focus {
+    border-color: #3182f6;
+    box-shadow: 0 0 4px rgba(49, 130, 246, 0.5);
+}
+
+/* 버튼 스타일 */
+.find-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #3182f6;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.find-btn:hover {
+    background-color: #1c6ed3;
+}
+
+/* 하단 링크 스타일 */
+.find-footer {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.find-footer a {
+    color: #3182f6;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.find-footer a:hover {
+    text-decoration: underline;
+}

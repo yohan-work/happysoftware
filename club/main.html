@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동호회 메인</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/club.css">
+</head>
+<body>
+	<!-- 헤더 -->
+	<header class="header">
+		<h1>매칭 시스템</h1>
+	</header>
+	<!-- 메인 기능 선택 -->
+	<main class="main-content">
+		<div class="option" id="club-page">
+			<h2>동호회 페이지</h2>
+			<p>동호회 팀 매칭을 확인하고 관리할 수 있습니다.</p>
+		</div>
+		<div class="option" id="mercenary-page">
+			<h2>용병 페이지</h2>
+			<p>개인 용병으로 매칭하고 팀에 참여할 수 있습니다.</p>
+		</div>
+	</main>
+	<!-- 푸터 -->
+	<footer class="footer">
+		<p>동호회 매칭 시스템에 오신 것을 환영합니다!</p>
+	</footer>
+
+	<!-- JavaScript -->
+	<script>
+		document.getElementById("club-page").addEventListener("click", function() {
+			alert("동호회 페이지로 이동합니다.");
+			// location.href = "club-page.html"; // 페이지 이동 시 사용
+		});
+
+		document.getElementById("mercenary-page").addEventListener("click", function() {
+			alert("용병 페이지로 이동합니다.");
+			// location.href = "mercenary-page.html"; // 페이지 이동 시 사용
+		});
+	</script>
+</body>
+</html>

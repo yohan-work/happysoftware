@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동호회 메인</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/club.css">
+</head>
+<body>
+	<!-- 공통 헤더 -->
+    <header class="feed-header">
+        <h1>피드 생성</h1>
+    </header>
+
+    <!-- 피드 생성 폼 -->
+    <main class="feed-create">
+        <label for="image">이미지 업로드</label>
+        <input type="file" id="image" accept="image/*">
+
+        <label for="author">작성자</label>
+        <input type="text" id="author" placeholder="작성자 이름">
+
+        <label for="content">작성 내용</label>
+        <textarea id="content" rows="5" placeholder="내용을 입력하세요..."></textarea>
+
+        <button class="feed-submit-btn confirm-btn" onclick="alert('피드 생성이 완료되었습니다!')">피드 생성 완료</button>
+    </main>
+</body>
+</html>

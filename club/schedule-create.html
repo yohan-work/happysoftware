@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동호회 메인</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/club.css">
+</head>
+<body>
+	<!-- 공통 헤더 -->
+    <header class="schedule-header">
+        <h1>SNS > 일정 생성</h1>
+    </header>
+
+    <!-- 일정 생성 폼 -->
+    <main class="schedule-create">
+        <label for="event-title">경기 및 이벤트 내용</label>
+        <input type="text" id="event-title" placeholder="이벤트 제목을 입력하세요" required>
+
+        <label for="event-date">일정</label>
+        <input type="datetime-local" id="event-date" required>
+
+        <label for="event-author">작성자</label>
+        <input type="text" id="event-author" placeholder="작성자 이름" required>
+
+        <button class="schedule-submit-btn" onclick="alert('일정이 생성되었습니다!')">일정 생성 완료</button>
+    </main>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동호회 메인</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/club.css">
+</head>
+<body>
+	 <header class="common-header">
+        <h1>포메이션</h1>
+    </header>
+
+   <section class="formation-buttons">
+	<button class="common-button load-formation">이전 포메이션 불러오기</button>
+	<button class="common-button auto-formation" id="randomize-btn">자동 포메이션</button>
+</section>
+
+<section class="formation-field" id="formation-field">
+	<div class="player-position" data-role="GK">GK</div>
+	<div class="player-position" data-role="DF">DF</div>
+	<div class="player-position" data-role="DF">DF</div>
+	<div class="player-position" data-role="DF">DF</div>
+	<div class="player-position" data-role="DF">DF</div>
+	<div class="player-position" data-role="MF">MF</div>
+	<div class="player-position" data-role="MF">MF</div>
+	<div class="player-position" data-role="MF">MF</div>
+	<div class="player-position" data-role="FW">FW</div>
+	<div class="player-position" data-role="FW">FW</div>
+	<div class="player-position" data-role="FW">FW</div>
+</section>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const positions = document.querySelectorAll('.player-position');
+		const field = document.getElementById('formation-field');
+
+		// 초기 세로 배치
+		positions.forEach((player, index) => {
+			const verticalGap = 50; // 세로 간격
+			player.style.left = "50%"; // 중앙 정렬
+			player.style.top = `${index * verticalGap}px`; // 순차적으로 세로 배치
+			player.style.transform = "translateX(-50%)"; // 중앙 보정
+		});
+
+		// 포지션별 영역 정의
+		const positionZones = {
+			GK: { top: 85, bottom: 95, left: 45, right: 55 }, // 골키퍼
+			DF: { top: 60, bottom: 75, left: 10, right: 90 }, // 수비수
+			MF: { top: 35, bottom: 55, left: 15, right: 85 }, // 미드필더
+			FW: { top: 10, bottom: 25, left: 10, right: 90 }  // 공격수
+		};
+
+		// 랜덤 포메이션 버튼 클릭 이벤트
+		document.getElementById('randomize-btn').addEventListener('click', function () {
+			positions.forEach(player => {
+				const role = player.dataset.role; // 포지션 역할 확인
+				const zone = positionZones[role];
+				const randomLeft = Math.random() * (zone.right - zone.left) + zone.left;
+				const randomTop = Math.random() * (zone.bottom - zone.top) + zone.top;
+
+				player.style.left = `${randomLeft}%`;
+				player.style.top = `${randomTop}%`;
+				player.style.transform = "none"; // 보정 제거
+			});
+		});
+	});
+</script>
+	
+</body>
+</html>

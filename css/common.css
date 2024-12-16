@@ -1,0 +1,78 @@
+/* 전체 화면 사용 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 헤더 스타일 */
+.header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222;
+}
+
+/* 폼 스타일 */
+.login-form {
+    width: 100%;
+    max-width: 400px; /* 모바일 화면 비율 고정 */
+    padding: 0 1.5rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #3182f6;
+    box-shadow: 0 0 4px rgba(49, 130, 246, 0.5);
+}
+
+.basic-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 8px 15px;
+	border: 1px solid #ddd;
+	transition: all .3s;
+}
+.basic-btn:hover {
+	color: #fff;
+	background: #3182f6;
+	border: 1px solid #3182f6;
+	border-radius: 150px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동호회 메인</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/club.css">
+</head>
+<body>
+	<header class="header">
+        <h1>MY 설정</h1>
+    </header>
+	<main class="settings-main">
+        <!-- 선호 포지션 -->
+        <section class="setting-section">
+            <h2>선호 포지션</h2>
+            <div class="position-options">
+                <button class="position-btn">FW</button>
+                <button class="position-btn">MF</button>
+                <button class="position-btn">DF</button>
+                <button class="position-btn">GK</button>
+            </div>
+        </section>
+        <!-- 희망 참여 쿼터 -->
+        <section class="setting-section">
+            <h2>희망 참여 쿼터</h2>
+            <div class="quarter-options">
+                <button class="quarter-btn">1</button>
+                <button class="quarter-btn">2</button>
+                <button class="quarter-btn">3</button>
+                <button class="quarter-btn">4</button>
+            </div>
+        </section>
+		<a href="#" class="basic-btn">저장</a>
+    </main>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			const buttons = document.querySelectorAll(".position-btn");
+			const buttons_Q = document.querySelectorAll(".quarter-btn");
+
+			buttons.forEach(button => {
+				button.addEventListener("click", function() {
+					// 모든 버튼에서 'active' 클래스 제거
+					buttons.forEach(btn => btn.classList.remove("active"));
+					// 클릭된 버튼에 'active' 클래스 추가
+					this.classList.add("active");
+				});
+			});
+
+			buttons_Q.forEach(button => {
+				button.addEventListener("click", function() {
+					// 모든 버튼에서 'active' 클래스 제거
+					buttons_Q.forEach(btn => btn.classList.remove("active"));
+					// 클릭된 버튼에 'active' 클래스 추가
+					this.classList.add("active");
+				});
+			});
+		});
+
+	</script>
+</body>
+</html>

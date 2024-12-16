@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동호회 메인</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/club.css">
+</head>
+<body>
+	 <!-- 공통 헤더 -->
+	 <header class="common-header">
+        <h1>일정 확인 및 저장</h1>
+    </header>
+
+    <!-- 일정 정보 확인 -->
+    <main class="schedule-confirm">
+        <h2>일정 확인</h2>
+        <div class="schedule-details">
+            <p><strong>제목:</strong> <span id="confirm-title"></span></p>
+            <p><strong>날짜:</strong> <span id="confirm-date"></span></p>
+            <p><strong>시간:</strong> <span id="confirm-time"></span></p>
+            <p><strong>장소:</strong> <span id="confirm-location"></span></p>
+        </div>
+        <button class="common-button btn__center" id="save-button">일정 저장</button>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('confirm-title').textContent = params.get('title');
+        document.getElementById('confirm-date').textContent = params.get('date');
+        document.getElementById('confirm-time').textContent = params.get('time');
+        document.getElementById('confirm-location').textContent = params.get('location');
+
+        document.getElementById('save-button').addEventListener('click', function () {
+            alert('일정이 성공적으로 저장되었습니다!');
+            window.location.href = 'create-schedule-step1.html'; // 다시 처음 페이지로 이동
+        });
+    </script>
+</body>
+</html>

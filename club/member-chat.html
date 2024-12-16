@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동호회 메인</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/club.css">
+</head>
+<body>
+	<!-- 공통 헤더 -->
+    <header class="chat-header">
+        <h1>채팅</h1>
+    </header>
+
+   <!-- 채팅창 -->
+   <main class="chat-container">
+		<div id="chat-box" class="chat-box">
+			<!-- 메시지가 여기에 표시됩니다 -->
+		</div>
+		<div class="input-container">
+			<input type="text" id="message-input" placeholder="메시지를 입력하세요..." />
+			<button id="send-btn" class="">전송</button>
+		</div>
+	</main>
+
+	<!-- JavaScript -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const sendBtn = document.getElementById("send-btn");
+			const messageInput = document.getElementById("message-input");
+			const chatBox = document.getElementById("chat-box");
+
+			// 랜덤 응답 메시지 배열
+			const randomReplies = [
+				"안녕하세요!",
+				"오늘 날씨 좋네요",
+				"무엇을 도와드릴까요?",
+				"좋은 하루 되세요!",
+				"그거 참 흥미롭네요.",
+				"음... 생각해볼게요.",
+				"혹시 다른 질문 있으신가요?",
+				"네, 알겠습니다!",
+				"제가 처리할게요. 걱정 마세요!",
+				"정말요? 대단해요!"
+			];
+
+			// 메시지 추가 함수
+			function addMessage(text, type) {
+				const messageDiv = document.createElement("div");
+				messageDiv.classList.add("message", type);
+				messageDiv.innerText = text;
+				chatBox.appendChild(messageDiv);
+				chatBox.scrollTop = chatBox.scrollHeight; // 스크롤 맨 아래로 이동
+			}
+
+			// 전송 버튼 클릭 이벤트
+			function handleSendMessage() {
+				const messageText = messageInput.value.trim();
+				if (messageText !== "") {
+					// 사용자 메시지 추가
+					addMessage(messageText, "sent");
+					messageInput.value = "";
+
+					// 랜덤 응답 메시지 추가 (0.5초 후)
+					setTimeout(() => {
+						const randomIndex = Math.floor(Math.random() * randomReplies.length);
+						const randomReply = randomReplies[randomIndex];
+						addMessage(randomReply, "received");
+					}, 500);
+				}
+			}
+
+			sendBtn.addEventListener("click", handleSendMessage);
+
+			// Enter 키 입력 이벤트
+			messageInput.addEventListener("keydown", function (e) {
+				if (e.key === "Enter") {
+					e.preventDefault();
+					handleSendMessage();
+				}
+			});
+		});
+	</script>
+</body>
+</html>
