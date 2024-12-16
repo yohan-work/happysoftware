@@ -40,5 +40,15 @@
             </div>
         </div>
     </main>
+
+	<script>
+		// 모든 .apply-btn 버튼에 클릭 이벤트 등록
+		document.querySelectorAll('.apply-btn').forEach(function(button) {
+			button.addEventListener('click', function() {
+				alert('용병 신청이 완료되었습니다!');
+			});
+		});
+
+	</script>
 </body>
 </html>

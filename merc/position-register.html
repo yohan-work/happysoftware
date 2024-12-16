@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동호회 메인</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/club.css">
+	<link rel="stylesheet" href="../css/merc.css">
+</head>
+<body>
+	 <!-- 공통 헤더 -->
+	 <header class="position-header">
+        <h1>선호포지션 등록</h1>
+    </header>
+
+    <!-- 선호 포지션 선택 폼 -->
+    <main class="position-form" style="max-width: 480px">
+        <div class="position-options">
+            <label>
+                <input type="checkbox" id="fw" value="FW">
+                FW
+            </label>
+            <label>
+                <input type="checkbox" id="mf" value="MF">
+                MF
+            </label>
+            <label>
+                <input type="checkbox" id="df" value="DF">
+                DF
+            </label>
+            <label>
+                <input type="checkbox" id="gf" value="GF">
+                GF
+            </label>
+        </div>
+
+        <!-- 설명 -->
+        <ul class="position-descriptions">
+            <li><strong>FW:</strong> 축구에서 전방에 위치하여 골을 넣는 임무를 맡는 역할</li>
+            <li><strong>MF:</strong> 공격수(FW)와 수비수(DF) 사이에 위치하며 플레이하는 선수</li>
+            <li><strong>DF:</strong> 골키퍼(GK)와 미드필더(MF) 사이에 위치하며 플레이하는 선수</li>
+            <li><strong>GF:</strong> 그라운드 내부에서 유일하게 손을 사용할 수 있는 포지션</li>
+        </ul>
+
+        <!-- 버튼 -->
+        <div class="position-buttons">
+            <button class="confirm-btn" onclick="confirmPosition()">저장</button>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        function confirmPosition() {
+            const checkboxes = document.querySelectorAll('.position-options input[type="checkbox"]');
+            const selected = Array.from(checkboxes)
+                                  .filter(checkbox => checkbox.checked)
+                                  .map(checkbox => checkbox.value);
+
+            if (selected.length === 0) {
+                alert("선호 포지션을 선택해 주세요.");
+            } else {
+                alert(`선호 포지션 등록이 완료되었습니다!\n선택된 포지션: ${selected.join(", ")}`);
+                location.reload();
+            }
+        }
+    </script>
+</body>
+</html>

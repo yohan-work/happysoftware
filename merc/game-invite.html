@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동호회 메인</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/club.css">
+	<link rel="stylesheet" href="../css/merc.css">
+</head>
+<body>
+	 <!-- 공통 헤더 -->
+	 <header class="invite-header">
+        <h1>초대된 게임 확인</h1>
+    </header>
+
+    <!-- 초대된 게임 목록 -->
+    <main class="invite-list">
+        <div class="invite-item">
+            <p>&lt;11/5, 09:00&gt;<br>FC소융, 인하대공원 축구장</p>
+            <div class="invite-buttons">
+                <button class="accept-btn" onclick="handleInvite(true)">수락하기</button>
+                <button class="reject-btn" onclick="handleInvite(false)">거절하기</button>
+            </div>
+        </div>
+
+        <div class="invite-item">
+            <p>&lt;11/6, 14:00&gt;<br>FC산경, 인하대학교 축구장</p>
+            <div class="invite-buttons">
+                <button class="accept-btn" onclick="handleInvite(true)">수락하기</button>
+                <button class="reject-btn" onclick="handleInvite(false)">거절하기</button>
+            </div>
+        </div>
+
+        <div class="invite-item">
+            <p>&lt;11/9, 20:00&gt;<br>FC메카, 계양경기장 축구장</p>
+            <div class="invite-buttons">
+                <button class="accept-btn" onclick="handleInvite(true)">수락하기</button>
+                <button class="reject-btn" onclick="handleInvite(false)">거절하기</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        function handleInvite(isAccepted) {
+            if (isAccepted) {
+                alert("게임 초대를 수락하였습니다.");
+            } else {
+                alert("게임 초대를 거절하였습니다.");
+            }
+        }
+    </script>
+</body>
+</html>

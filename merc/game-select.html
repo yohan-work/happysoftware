@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동호회 메인</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/club.css">
+	<link rel="stylesheet" href="../css/merc.css">
+</head>
+<body>
+	 <!-- 공통 헤더 -->
+	 <header class="game-header">
+        <h1>참가 게임 선택</h1>
+    </header>
+
+    <!-- 날짜 선택 -->
+    <nav class="game-date-nav">
+        <button class="game-date-btn active">4(월)</button>
+        <button class="game-date-btn">5(화)</button>
+        <button class="game-date-btn">6(수)</button>
+        <button class="game-date-btn">7(목)</button>
+        <button class="game-date-btn">8(금)</button>
+        <button class="game-date-btn">9(토)</button>
+        <button class="game-date-btn">10(일)</button>
+    </nav>
+
+    <!-- 경기 목록 -->
+    <main class="game-list">
+        <div class="game-item">
+            <span>09:00 인하대공원 축구장</span>
+            <button class="apply-btn" onclick="applyGame(this)">신청하기</button>
+        </div>
+        <div class="game-item">
+            <span>10:00 인하대공원 축구장</span>
+            <button class="apply-btn" onclick="applyGame(this)">신청하기</button>
+        </div>
+        <div class="game-item">
+            <span>13:00 승림체육관 축구장</span>
+            <button class="full-btn" disabled>마감</button>
+        </div>
+        <div class="game-item">
+            <span>14:00 계양경기장 축구장</span>
+            <button class="apply-btn" onclick="applyGame(this)">신청하기</button>
+        </div>
+        <div class="game-item">
+            <span>16:00 인하대공원 축구장</span>
+            <button class="full-btn" disabled>마감</button>
+        </div>
+        <div class="game-item">
+            <span>18:00 공촌유수지 축구장</span>
+            <button class="apply-btn" onclick="applyGame(this)">신청하기</button>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        function applyGame(button) {
+            alert("참가 신청이 완료되었습니다!");
+            button.disabled = true;
+            button.innerText = "신청 완료";
+            button.classList.add("applied");
+        }
+    </script>
+</body>
+</html>

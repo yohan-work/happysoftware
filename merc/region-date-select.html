@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동호회 메인</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/club.css">
+	<link rel="stylesheet" href="../css/merc.css">
+</head>
+<body>
+	 <!-- 공통 헤더 -->
+	 <header class="region-header">
+        <h1>희망지역/일자 선택</h1>
+    </header>
+
+    <!-- 희망 지역 선택 -->
+    <main class="region-select">
+        <label for="region-dropdown">지역 선택</label>
+        <select id="region-dropdown" class="region-dropdown">
+            <option value="" selected disabled>-- 지역을 선택하세요 --</option>
+            <option value="서울특별시">서울특별시</option>
+            <option value="인천광역시">인천광역시</option>
+            <option value="대구광역시">대구광역시</option>
+            <option value="부산광역시">부산광역시</option>
+        </select>
+
+        <!-- 희망 일자 선택 -->
+        <section class="date-section">
+            <h2>희망일자 선택</h2>
+            <input type="date" id="date-picker" class="date-picker">
+        </section>
+
+        <!-- 확인 버튼 -->
+        <button class="confirm-btn" onclick="submitRegionDate()">확인</button>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        function submitRegionDate() {
+            const region = document.getElementById("region-dropdown").value;
+            const date = document.getElementById("date-picker").value;
+
+            if (!region) {
+                alert("희망 지역을 선택해 주세요.");
+                return;
+            }
+
+            if (!date) {
+                alert("희망 일자를 선택해 주세요.");
+                return;
+            }
+
+            alert(`희망 지역: ${region}\n희망 일자: ${date}\n등록이 완료되었습니다.`);
+        }
+    </script>
+</body>
+</html>
